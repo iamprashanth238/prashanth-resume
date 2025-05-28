@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Yashwanth | Resume" />
+    <title>Prashanth | Resume</title>
+    <link rel="icon" type="image/png" href="assets/Profile picture.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Page Setup */
+      @page {
+        size: A4;
+        margin: 10mm 20mm 20mm 20mm;
+      }
+
+      /* Base Reset & Typography */
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f7;
+        color: #1d1d1f;
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      /* Container */
+      .container {
+        width: 90%;
+        max-width: 850px;
+        margin: 20px auto;
+        background-color: #ffffff;
+        padding: clamp(20px, 5vw, 40px);
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      }
+
+      /* Header */
+      header {
+        display: flex;
+        align-items: flex-start;
+        gap: clamp(16px, 3vw, 20px);
+        margin-bottom: 24px;
+      }
+      .profile {
+        width: clamp(80px, 15vw, 100px);
+        height: clamp(80px, 15vw, 100px);
+        border-radius: 50%;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+      .profile img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .main-info {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .main-info h1 {
+        font-size: 26px;
+        font-weight: 700;
+        margin: 0;
+        color: #1d1d1f;
+      }
+      .subtitle {
+        font-size: 15px;
+        font-weight: 500;
+        color: #6c6c70;
+        margin: 0;
+      }
+      .contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        font-size: 14px;
+        color: #6c6c70;
+      }
+      .contact-info a {
+        color: #007aff;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .contact-info a:hover {
+        text-decoration: underline;
+      }
+
+      /* Section Headings with Emojis */
+      h2 {
+        font-size: 18px;
+        font-weight: 600;
+        margin: 32px 0 12px 0;
+        color: #1d1d1f;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      h2 .material-icons-outlined {
+        font-size: 18px;
+        color: #8e8e93;
+      }
+
+      /* Section Content Layout */
+      .section-content {
+        margin-bottom: 16px;
+      }
+      .entry {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+      .entry .entry-details {
+        flex: 1;
+      }
+      .entry-title {
+        font-size: 15px;
+        font-weight: 600;
+        color: #1d1d1f;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        align-items: center;
+      }
+      .entry-subtitle {
+        font-weight: 500;
+        color: #6c6c70;
+      }
+      .entry-dates {
+        font-size: 15px;
+        font-weight: 500;
+        white-space: nowrap;
+        color: #1d1d1f;
+        margin-left: auto;
+      }
+      ul {
+        margin: 8px 0 0 20px;
+        padding: 0;
+      }
+      ul li {
+        margin-bottom: 4px;
+      }
+
+      /* Grid Layouts for Skills and Certifications */
+      .grid-two {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          align-items: flex-start;
+          text-align: left;
+        }
+        .main-info {
+          align-items: flex-start;
+        }
+        .contact-info {
+          display: block;
+        }
+        .contact-info div {
+          margin-bottom: 8px;
+        }
+        .project-link {
+          display: block;
+          margin-top: 8px;
+        }
+        .entry {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .entry-dates {
+          margin-top: 4px;
+        }
+        .container {
+          width: 95%;
+          margin: 10px auto;
+          padding: 20px;
+        }
+
+        .grid-two {
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+
+        .entry {
+          gap: 8px;
+        }
+
+        .contact-info {
+          flex-direction: column;
+          gap: 8px;
+        }
+
+        .contact-info div {
+          width: 100%;
+        }
+
+        .main-info h1 {
+          font-size: clamp(22px, 5vw, 26px);
+        }
+
+        .subtitle {
+          font-size: clamp(14px, 3vw, 15px);
+        }
+      }
+
+      @media print {
+        body {
+          background-color: #ffffff;
+        }
+        .container {
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          box-shadow: none;
+        }
+      }
+
+      /* Section Separator: Reduced spacing with a light grey line */
+      .section-content:not(:last-of-type) {
+        border-bottom: 1px solid #d3d3d3;
+        padding-bottom: 16px;
+        margin-bottom: 16px;
+      }
+
+      /* Radar Animation for Zomato */
+      .radar {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: #28a745;
+        border-radius: 50%;
+        margin-right: 8px;
+        position: relative;
+      }
+      .radar::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        border: 2px solid #28a745;
+        border-radius: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+        animation: radarPulse 2s infinite;
+      }
+      @keyframes radarPulse {
+        0% {
+          transform: translate(-50%, -50%) scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: translate(-50%, -50%) scale(2);
+          opacity: 0;
+        }
+      }
+
+      /* Font size responsiveness */
+      h2 {
+        font-size: clamp(16px, 3vw, 18px);
+      }
+
+      .entry-title {
+        font-size: clamp(14px, 2.5vw, 15px);
+      }
+
+      .entry-subtitle {
+        font-size: clamp(13px, 2.5vw, 14px);
+      }
+
+      .entry-dates {
+        font-size: clamp(13px, 2.5vw, 15px);
+      }
+
+      /* Ensure links are properly visible on mobile */
+      .contact-info a {
+        display: inline-block;
+        padding: 2px 0;
+      }
+
+      /* Improve touch targets on mobile */
+      .project-link {
+        padding: 8px 0;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="profile">
+          <img
+            src="assets/Profile picture.png"
+            alt="Prashanth Profile Picture"
+          />
+        </div>
+        <div class="main-info">
+          <h1>Kattoju Prashanth</h1>
+          <p class="subtitle">B.Tech Artificial Intelligence</p>
+          <div class="contact-info">
+            <div>
+              <span
+                >Email:
+                <a href="mailto:kattojuprashanth238@gmail.com"
+                  >kattojuprashanth238@gmail.com</a
+                ></span
+              >
+              <br />
+              <span>Phone: <a href="tel:9391650293">+91 9391650293</a></span>
+            </div>
+            <div>
+              <span
+                >Github:
+                <a
+                  href="https://www.github.com/iamprashanth238"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >github.com/iamprashanth238</a
+                ></span
+              >
+              <br />
+              <span
+                >LinkedIn:
+                <a
+                  href="https://www.linkedin.com/in/kattoju-prashanth-999908229"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >linkedin.com/in/kattoju-prashanth-999908229</a
+                ></span
+              >
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <!-- Summary Section -->
+        <section class="section-content">
+          <h2>
+            <img
+              src="https://em-content.zobj.net/source/apple/419/memo_1f4dd.png"
+              alt="Memo"
+              style="
+                width: 20px;
+                height: 20px;
+                vertical-align: middle;
+                margin-right: 6px;
+              "
+            />
+            Summary
+          </h2>
+          <p>
+            Aspiring Engineering Intern with a strong foundation in Python,
+            Java, and Web Development. Interested in using LLMs and integrating
+            with the application. Passionate about problem-solving and building
+            scalable solutions. Eager to contribute my skills to a fast-paced
+            product company while continuously learning and growing in a
+            professional environment.
+          </p>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section class="section-content">
+          <h2>
+            <img
+              src="https://em-content.zobj.net/source/apple/419/briefcase_1f4bc.png"
+              alt="Briefcase"
+              style="
+                width: 20px;
+                height: 20px;
+                vertical-align: middle;
+                margin-right: 6px;
+              "
+            />Work Experience
+          </h2>
+          <div class="entry">
+            <div class="entry-details">
+              <div class="entry-title">
+                AICTE & EDUNET Foundation
+                <span class="entry-subtitle"
+                  >Artificial Intelligence Intern</span
+                >
+              </div>
+              <ul>
+                <li>Gained a foundational understanding of AI applications.</li>
+                <li>Worked on an NLP-based project.</li>
+              </ul>
+            </div>
+            <div class="entry-dates">Aug 2023 - Oct 2023</div>
+          </div>
+          <div class="entry">
+            <div class="entry-details">
+              <div class="entry-title">
+                NSIC - National Small Industries Corporation
+                <span class="entry-subtitle"
+                  >Python & Web Development Intern</span
+                >
+              </div>
+              <ul>
+                <li>
+                  Developed Python and web development skills with Django under
+                  mentorship.
+                </li>
+              </ul>
+            </div>
+            <div class="entry-dates">Aug 2021 - Feb 2022</div>
+          </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="section-content">
+          <h2>
+            <img
+              src="https://em-content.zobj.net/source/apple/419/graduation-cap_1f393.png"
+              alt="Graduation Cap"
+              style="
+                width: 20px;
+                height: 20px;
+                vertical-align: middle;
+                margin-right: 6px;
+              "
+            />
+            Education
+          </h2>
+          <div class="entry">
+            <div class="entry-details">
+              <div class="entry-title">
+                Anurag University
+                <span class="entry-subtitle"
+                  >B.Tech Artificial Intelligence</span
+                >
+              </div>
+            </div>
+            <div class="entry-dates">2022 - 2025</div>
+          </div>
+          <div class="entry">
+            <div class="entry-details">
+              <div class="entry-title">
+                Teegala Krishna Reddy Engineering College
+                <span class="entry-subtitle"
+                  >Polytechnic, Computer Engineering (GPA: 8.01)</span
+                >
+              </div>
+            </div>
+            <div class="entry-dates">2019 - 2022</div>
+          </div>
+          <div class="entry">
+            <div class="entry-details">
+              <div class="entry-title">
+                Montessori High School
+                <span class="entry-subtitle">SSC (GPA: 8.7)</span>
+              </div>
+            </div>
+            <div class="entry-dates">2018 - 2019</div>
+          </div>
+        </section>
+
+        <!-- Notable Projects Section -->
+        <section class="section-content">
+          <h2>
+            <img
+              src="https://em-content.zobj.net/source/apple/419/file-folder_1f4c1.png"
+              alt="File Folder"
+              style="
+                width: 20px;
+                height: 20px;
+                vertical-align: middle;
+                margin-right: 6px;
+              "
+            />
+            Notable Projects
+          </h2>
+          <div class="entry">
+            <div class="entry-details">
+              <div class="entry-title">
+                Telugu Transcription for YouTube Videos
+                <span class="entry-subtitle">Speech-to-Text System</span>
+              </div>
+              <ul>
+                <li>
+                  Developed a browser extension to automatically generate Telugu
+                  transcriptions for YouTube videos.
+                </li>
+                <li>
+                  Fine-tuned Openai's Whisper Speech-to-text model for the
+                  Telugu language, improving transcription accuracy by reducing
+                  Word Error Rate from 126% to 15%.
+                </li>
+                <li>
+                  Built an end-to-end system using Python, Flask, and Whisper
+                  for seamless backend integration and deployment.
+                </li>
+                <li>
+                  For post-processing, integrated with LLM for effective
+                  readability and accurate results.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-details">
+              <div class="entry-title">
+                Customer Sentiment Analysis
+                <span class="entry-subtitle"
+                  >ML-based Sentiment Classification</span
+                >
+              </div>
+              <ul>
+                <li>
+                  Designed and implemented a predictive model to classify
+                  customer sentiment based on restaurant reviews.
+                </li>
+                <li>
+                  Collected and preprocessed publicly available customer review
+                  data; performed exploratory data analysis and visualisations
+                  to uncover key insights.
+                </li>
+                <li>
+                  Trained multiple machine learning algorithms, including
+                  Decision Tree, Random Forest, and Multinomial Naive Bayes;
+                  selected the best-performing model based on accuracy metrics.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section-content">
+          <h2>
+            <img
+              src="https://em-content.zobj.net/source/apple/419/artist-palette_1f3a8.png"
+              alt="Artist Palette"
+              style="
+                width: 20px;
+                height: 20px;
+                vertical-align: middle;
+                margin-right: 6px;
+              "
+            />
+            Skills
+          </h2>
+          <div class="grid-two">
+            <ul>
+              <li>Programming: Python, Java</li>
+              <li>Web Technologies: HTML, CSS, JavaScript</li>
+              <li>Databases: MySQL</li>
+              <li>Machine Learning, Deep Learning</li>
+              <li>Developer Tools: Git, VS code, Postman API</li>
+            </ul>
+            <ul>
+              <li>Problem Solving</li>
+              <li>Strong Analytical Thinking</li>
+              <li>Effective Communication</li>
+              <li>Team Collaboration</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="section-content">
+          <h2>
+            <img
+              src="https://em-content.zobj.net/source/apple/419/scroll_1f4dc.png"
+              alt="Scroll"
+              style="
+                width: 20px;
+                height: 20px;
+                vertical-align: middle;
+                margin-right: 6px;
+              "
+            />
+            Certifications
+          </h2>
+          <div class="grid-two">
+            <ul>
+              <li>Infosys Springboard - Basics of Python, AI</li>
+              <li>
+                CISCO Netacad - Introduction to Cyber Security, Essentials of
+                Cyber Security
+              </li>
+              <li>Mathworks - Machine Learning onramp</li>
+            </ul>
+            <ul>
+              <li>LinkedIn Learning - NLP</li>
+              <li>Wipro TalentNext - Full Stack Java</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Awards & Recognition Section-->
+        <section class="section-content">
+          <h2>
+            <img
+              src="https://em-content.zobj.net/source/apple/419/sports-medal_1f3c5.png"
+              alt="Sports Medal"
+              style="
+                width: 20px;
+                height: 20px;
+                vertical-align: middle;
+                margin-right: 6px;
+              "
+            />Awards & Recognition
+          </h2>
+          <ul>
+            <li>
+              Successfully completed Wipro TalentNext Certification in Java Full
+              Stack Development, demonstrating proficiency in core Java and
+              full-stack skills.
+            </li>
+          </ul>
+        </section>
+
+        <!-- Co-curricular Activities Section -->
+        <section class="section-content">
+          <h2>
+            <img
+              src="https://em-content.zobj.net/source/apple/419/artist_1f9d1-200d-1f3a8.png"
+              alt="Artist"
+              style="
+                width: 20px;
+                height: 20px;
+                vertical-align: middle;
+                margin-right: 6px;
+              "
+            />Co-curricular Activities
+          </h2>
+          <ul>
+            <li>Content Creation</li>
+            <li>Drawing</li>
+            <li>Meditation</li>
+            <li>Seeking New Technologies</li>
+          </ul>
+        </section>
+
+        <!-- Languages Section -->
+        <section class="section-content">
+          <h2>
+            <img
+              src="https://em-content.zobj.net/source/apple/419/speaking-head_1f5e3-fe0f.png"
+              alt="Speaking Head"
+              style="
+                width: 20px;
+                height: 20px;
+                vertical-align: middle;
+                margin-right: 6px;
+              "
+            />Languages
+          </h2>
+          <ul>
+            <li>Telugu: Native Proficiency</li>
+            <li>English: Professional Proficiency</li>
+            <li>Hindi: Professional Proficiency</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
